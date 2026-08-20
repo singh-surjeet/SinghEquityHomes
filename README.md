@@ -9,8 +9,8 @@ Built with [Astro](https://astro.build) + [Tailwind CSS](https://tailwindcss.com
 
 | Layer       | Tool                                    |
 |-------------|-----------------------------------------|
-| Framework   | Astro 4 (static output)                 |
-| Styling     | Tailwind CSS 3                          |
+| Framework   | Astro 7 (static output)                 |
+| Styling     | Tailwind CSS 4 (via `@tailwindcss/vite`) |
 | Fonts       | Playfair Display + Inter (Google Fonts) |
 | CI/CD       | GitHub Actions → GitHub Pages           |
 
