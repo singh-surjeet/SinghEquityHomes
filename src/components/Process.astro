@@ -1,0 +1,59 @@
+---
+const steps = [
+  {
+    num: '01',
+    title: 'Initial Assessment',
+    description:
+      'We assess the opportunity — land, site, or investment — against planning potential, market conditions, and viability. No obligation, no cost.',
+  },
+  {
+    num: '02',
+    title: 'Deal Structuring',
+    description:
+      "We agree heads of terms — whether that's an option agreement with a landowner, a JV structure with a partner, or a direct acquisition. Everything is clearly documented.",
+  },
+  {
+    num: '03',
+    title: 'Planning & Uplift',
+    description:
+      'Our team and partners manage the planning application process — from pre-application advice to securing permission — maximising the uplift value for all parties.',
+  },
+  {
+    num: '04',
+    title: 'Delivery or Exit',
+    description:
+      'We either build out the scheme and deliver homes, or sell the consented land — depending on the deal structure and market conditions — and distribute returns to all partners.',
+  },
+];
+---
+
+<section id="process" class="py-16 md:py-24 px-[5%]">
+  <div class="max-w-[900px] mx-auto">
+    <div class="text-center mb-16 fade-up">
+      <p class="section-eyebrow">How We Work</p>
+      <h2 class="section-title text-center mx-auto" style="max-width: 100%">From opportunity to outcome</h2>
+      <p class="section-sub text-center mx-auto">
+        A clear, transparent process — whether you're a landowner looking to sell, or an investor looking to partner.
+      </p>
+    </div>
+
+    <div>
+      {steps.map((step, i) => (
+        <div class="grid gap-8 pb-12 last:pb-0 fade-up" style="grid-template-columns: 64px 1fr">
+          <div class="relative">
+            <div class="w-12 h-12 bg-navy text-gold font-serif text-lg font-semibold flex items-center justify-center rounded-full relative z-10">
+              {step.num}
+            </div>
+            {i < steps.length - 1 && (
+              <div class="absolute w-[2px] bg-warm-gray" style="left: 23px; top: 48px; bottom: 0;"></div>
+            )}
+          </div>
+          <div class="pt-[0.6rem]">
+            <h3 class="font-serif text-[1.15rem] text-navy mb-2 font-semibold">{step.title}</h3>
+            <p class="text-[0.9rem] text-text-mid leading-7">{step.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

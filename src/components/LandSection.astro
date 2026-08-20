@@ -1,0 +1,46 @@
+---
+const items = [
+  'Garden land or paddocks',
+  'Redundant farm buildings',
+  'Brownfield sites',
+  'Garages or car parks',
+  'Commercial sites',
+  'Greenfield edge-of-village',
+  'Infill plots',
+  'Larger strategic sites',
+];
+---
+
+<section id="land" class="bg-navy py-16 md:py-24 px-[5%]">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center max-w-[1200px] mx-auto">
+
+    <div class="fade-up">
+      <p class="section-eyebrow">Landowners</p>
+      <h2 class="font-serif text-[clamp(1.8rem,3.5vw,2.8rem)] text-white leading-tight font-normal max-w-[640px] mb-4">
+        Does your land have untapped potential?
+      </h2>
+      <p class="text-base text-white/65 max-w-[520px] leading-[1.8]">
+        Many landowners don't realise the true value of what they hold. We offer free, no-obligation assessments —
+        and we can structure deals that mean you benefit from planning uplift without taking any of the risk.
+      </p>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 list-none p-0">
+        {items.map((item) => (
+          <li class="flex items-center gap-[0.6rem] text-sm text-white/75">
+            <span class="block w-[6px] h-[6px] bg-gold rounded-full flex-shrink-0"></span>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="bg-white/5 border border-gold/30 rounded-[2px] p-12 fade-up">
+      <h3 class="font-serif text-[1.4rem] text-white mb-4 font-normal">Get a free land assessment</h3>
+      <p class="text-[0.9rem] text-white/55 mb-8 leading-[1.8]">
+        Tell us about your land and we'll come back to you within 48 hours with an honest appraisal of its
+        development potential. No cost, no pressure, no obligation.
+      </p>
+      <a href="#contact" class="btn-primary block w-full text-center">Request Assessment</a>
+    </div>
+
+  </div>
+</section>

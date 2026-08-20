@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-block bg-gold text-navy py-[0.875rem] px-8 rounded-[2px] no-underline font-semibold text-[0.9rem] tracking-[0.04em] uppercase transition-all duration-200 cursor-pointer border-0;
+  }
+  .btn-primary:hover {
+    @apply bg-gold-light -translate-y-px;
+  }
+  .btn-outline {
+    @apply inline-block border border-white/40 text-white py-[0.875rem] px-8 rounded-[2px] no-underline font-medium text-[0.9rem] tracking-[0.04em] uppercase transition-all duration-200;
+  }
+  .btn-outline:hover {
+    @apply border-gold text-gold -translate-y-px;
+  }
+  .section-eyebrow {
+    @apply text-xs font-semibold tracking-[0.2em] uppercase text-gold mb-4;
+  }
+  .section-title {
+    @apply font-serif text-[clamp(1.8rem,3.5vw,2.8rem)] text-navy leading-tight font-normal max-w-[640px];
+  }
+  .section-sub {
+    @apply text-base text-text-mid mt-4 max-w-[520px] leading-[1.8];
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

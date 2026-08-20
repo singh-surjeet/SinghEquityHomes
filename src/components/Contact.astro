@@ -1,0 +1,87 @@
+<section id="contact" class="bg-off-white py-16 md:py-24 px-[5%]">
+  <div class="max-w-[800px] mx-auto text-center">
+    <p class="section-eyebrow">Get In Touch</p>
+    <h2 class="section-title text-center mx-auto" style="max-width: 100%">
+      Let's talk about your property goals
+    </h2>
+    <p class="section-sub text-center mx-auto mb-10">
+      Whether you're a landowner, investor, or potential JV partner — we'd love to hear from you.
+    </p>
+
+    <form class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left" onsubmit="return false;">
+      <div class="flex flex-col gap-1.5">
+        <label for="fname" class="text-xs font-semibold tracking-[0.08em] uppercase text-text-mid">
+          First Name
+        </label>
+        <input
+          type="text" id="fname" placeholder="Your first name"
+          class="w-full py-3 px-4 border border-warm-gray rounded-[2px] font-sans text-[0.95rem] text-navy bg-white outline-none transition-colors duration-200 focus:border-gold"
+        />
+      </div>
+
+      <div class="flex flex-col gap-1.5">
+        <label for="lname" class="text-xs font-semibold tracking-[0.08em] uppercase text-text-mid">
+          Last Name
+        </label>
+        <input
+          type="text" id="lname" placeholder="Your last name"
+          class="w-full py-3 px-4 border border-warm-gray rounded-[2px] font-sans text-[0.95rem] text-navy bg-white outline-none transition-colors duration-200 focus:border-gold"
+        />
+      </div>
+
+      <div class="flex flex-col gap-1.5">
+        <label for="email" class="text-xs font-semibold tracking-[0.08em] uppercase text-text-mid">
+          Email Address
+        </label>
+        <input
+          type="email" id="email" placeholder="you@example.com"
+          class="w-full py-3 px-4 border border-warm-gray rounded-[2px] font-sans text-[0.95rem] text-navy bg-white outline-none transition-colors duration-200 focus:border-gold"
+        />
+      </div>
+
+      <div class="flex flex-col gap-1.5">
+        <label for="phone" class="text-xs font-semibold tracking-[0.08em] uppercase text-text-mid">
+          Phone Number
+        </label>
+        <input
+          type="tel" id="phone" placeholder="+44"
+          class="w-full py-3 px-4 border border-warm-gray rounded-[2px] font-sans text-[0.95rem] text-navy bg-white outline-none transition-colors duration-200 focus:border-gold"
+        />
+      </div>
+
+      <div class="flex flex-col gap-1.5 col-span-1 md:col-span-2">
+        <label for="interest" class="text-xs font-semibold tracking-[0.08em] uppercase text-text-mid">
+          I'm Interested In
+        </label>
+        <select
+          id="interest"
+          class="w-full py-3 px-4 border border-warm-gray rounded-[2px] font-sans text-[0.95rem] text-navy bg-white outline-none transition-colors duration-200 focus:border-gold"
+        >
+          <option value="">Select an option...</option>
+          <option>Selling my land</option>
+          <option>Joint venture opportunity</option>
+          <option>Investment partnership</option>
+          <option>Development consultancy</option>
+          <option>General enquiry</option>
+        </select>
+      </div>
+
+      <div class="flex flex-col gap-1.5 col-span-1 md:col-span-2">
+        <label for="message" class="text-xs font-semibold tracking-[0.08em] uppercase text-text-mid">
+          Message
+        </label>
+        <textarea
+          id="message"
+          placeholder="Tell us a bit about your land, project, or enquiry..."
+          class="w-full py-3 px-4 border border-warm-gray rounded-[2px] font-sans text-[0.95rem] text-navy bg-white outline-none transition-colors duration-200 focus:border-gold resize-y min-h-[120px]"
+        ></textarea>
+      </div>
+
+      <div class="col-span-1 md:col-span-2 mt-2">
+        <button type="submit" class="btn-primary w-full text-center py-4 text-[0.95rem]">
+          Send Enquiry
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

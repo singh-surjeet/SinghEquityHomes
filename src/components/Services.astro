@@ -1,0 +1,67 @@
+---
+const services = [
+  {
+    title: 'Buy-to-Let Investments',
+    description:
+      'We acquire and manage residential properties across the UK, generating steady rental income and long-term capital appreciation within our corporate structure.',
+    icon: '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>',
+  },
+  {
+    title: 'Land Sourcing',
+    description:
+      'We identify underutilised land with development potential — working directly with landowners to unlock value through structured option agreements and planning strategy.',
+    icon: '<polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/>',
+  },
+  {
+    title: 'Planning Uplift',
+    description:
+      'We work to obtain planning permission on land, creating significant value uplift for both landowners and our development partners through strategic applications.',
+    icon: '<line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/>',
+  },
+  {
+    title: 'Joint Ventures',
+    description:
+      'We form strategic JV partnerships with developers, landowners, and investment partners — combining capital, expertise, and deal flow to create shared returns.',
+    icon: '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>',
+  },
+  {
+    title: 'Residential Development',
+    description:
+      'Working toward delivering quality new homes — from small infill sites to larger residential schemes — that address the UK\'s housing need while generating strong returns.',
+    icon: '<rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>',
+  },
+  {
+    title: 'Development Consultancy',
+    description:
+      'Advising property owners on the potential of their assets — viability assessments, planning strategy, and deal structuring to maximise the value of any opportunity.',
+    icon: '<circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>',
+  },
+];
+---
+
+<section id="services" class="bg-off-white py-16 md:py-24 px-[5%]">
+  <div class="text-center mb-14 fade-up">
+    <p class="section-eyebrow">What We Do</p>
+    <h2 class="section-title text-center mx-auto" style="max-width: 100%">Our Services</h2>
+    <p class="section-sub text-center mx-auto">
+      From passive income through buy-to-let to active value creation through development — SinghEquity Homes
+      operates across the full property spectrum.
+    </p>
+  </div>
+
+  <div class="grid gap-6 max-w-[1200px] mx-auto" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))">
+    {services.map((s) => (
+      <div class="bg-white p-10 rounded-[2px] border-t-[3px] border-t-gold transition-transform duration-200 hover:-translate-y-1 fade-up">
+        <div class="w-12 h-12 bg-gold/10 rounded-[2px] flex items-center justify-center mb-6">
+          <svg
+            viewBox="0 0 24 24"
+            style="width:24px;height:24px;stroke:#B8973A;fill:none;stroke-width:1.5"
+            set:html={s.icon}
+          ></svg>
+        </div>
+        <h3 class="font-serif text-xl text-navy mb-3 font-semibold">{s.title}</h3>
+        <p class="text-[0.9rem] text-text-mid leading-7">{s.description}</p>
+      </div>
+    ))}
+  </div>
+</section>
