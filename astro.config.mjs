@@ -6,8 +6,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  // GitHub Pages project site: served from /SinghEquityHomes/, not the domain root.
-  // Update or remove these once a custom domain is attached.
-  site: 'https://singh-surjeet.github.io',
-  base: '/SinghEquityHomes',
+  // Served from the custom domain root via public/CNAME — see README for the
+  // Cloudflare DNS records required to point it at GitHub Pages.
+  site: 'https://singhequityhomes.co.uk',
 });

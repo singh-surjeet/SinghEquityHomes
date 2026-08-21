@@ -80,21 +80,31 @@ astro.config.mjs       <- Astro + Tailwind integration, GitHub Pages site/base
 ### GitHub Pages (current)
 
 `.github/workflows/deploy.yml` builds the site and deploys it on every push
-to `main`, using `actions/deploy-pages`. One manual, one-time step is
-required in the repo itself:
+to `main`, using `actions/deploy-pages`. Pages source is set to **GitHub
+Actions** in the repo's Settings → Pages.
 
-1. Go to **Settings → Pages** on the GitHub repo.
-2. Under **Build and deployment → Source**, choose **GitHub Actions**.
+The site is served on a custom domain, **singhequityhomes.co.uk**, registered
+and DNS-managed via Cloudflare. Two things point it there:
 
-Once that's set, the live URL is:
+- `public/CNAME` — copied into `dist/` on every build, tells GitHub Pages
+  which custom domain to serve. Contains just `singhequityhomes.co.uk`.
+- The GitHub Pages site config (`cname` field, set via the GitHub API) —
+  must match the `CNAME` file or Pages will reject/ignore it.
 
-```
-https://singh-surjeet.github.io/SinghEquityHomes/
-```
+DNS records required in Cloudflare (**DNS only** / grey-cloud, not proxied —
+proxying breaks GitHub's automatic HTTPS certificate issuance):
 
-`astro.config.mjs` sets `site` and `base` to match this project-page path.
-If a custom domain is attached later, update/remove `base` there and add a
-`CNAME` file, or switch `site` to the custom domain.
+| Type  | Name | Value                    |
+|-------|------|--------------------------|
+| A     | @    | 185.199.108.153          |
+| A     | @    | 185.199.109.153          |
+| A     | @    | 185.199.110.153          |
+| A     | @    | 185.199.111.153          |
+| CNAME | www  | singh-surjeet.github.io  |
+
+`astro.config.mjs`'s `site` is set to `https://singhequityhomes.co.uk` to
+match. If the domain is ever moved off GitHub Pages, remove `public/CNAME`
+and update `site` accordingly.
 
 ### Moving to production hosting later
 

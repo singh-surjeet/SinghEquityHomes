@@ -8,13 +8,22 @@
       Whether you're a landowner, investor, or potential JV partner — we'd love to hear from you.
     </p>
 
-    <form class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left" onsubmit="return false;">
+    <form
+      class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left"
+      action="https://formsubmit.co/singh.surjeet@gmail.com"
+      method="POST"
+    >
+      <!-- FormSubmit config: https://formsubmit.co/documentation -->
+      <input type="hidden" name="_subject" value="New enquiry — SinghEquity Homes" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
       <div class="flex flex-col gap-1.5">
         <label for="fname" class="text-xs font-semibold tracking-[0.08em] uppercase text-text-mid">
           First Name
         </label>
         <input
-          type="text" id="fname" placeholder="Your first name"
+          type="text" id="fname" name="First Name" placeholder="Your first name"
           class="w-full py-3 px-4 border border-warm-gray rounded-[2px] font-sans text-[0.95rem] text-navy bg-white outline-none transition-colors duration-200 focus:border-gold"
         />
       </div>
@@ -24,7 +33,7 @@
           Last Name
         </label>
         <input
-          type="text" id="lname" placeholder="Your last name"
+          type="text" id="lname" name="Last Name" placeholder="Your last name"
           class="w-full py-3 px-4 border border-warm-gray rounded-[2px] font-sans text-[0.95rem] text-navy bg-white outline-none transition-colors duration-200 focus:border-gold"
         />
       </div>
@@ -34,7 +43,7 @@
           Email Address
         </label>
         <input
-          type="email" id="email" placeholder="you@example.com"
+          type="email" id="email" name="Email Address" placeholder="you@example.com" required
           class="w-full py-3 px-4 border border-warm-gray rounded-[2px] font-sans text-[0.95rem] text-navy bg-white outline-none transition-colors duration-200 focus:border-gold"
         />
       </div>
@@ -44,7 +53,7 @@
           Phone Number
         </label>
         <input
-          type="tel" id="phone" placeholder="+44"
+          type="tel" id="phone" name="Phone Number" placeholder="+44"
           class="w-full py-3 px-4 border border-warm-gray rounded-[2px] font-sans text-[0.95rem] text-navy bg-white outline-none transition-colors duration-200 focus:border-gold"
         />
       </div>
@@ -54,7 +63,7 @@
           I'm Interested In
         </label>
         <select
-          id="interest"
+          id="interest" name="Interested In"
           class="w-full py-3 px-4 border border-warm-gray rounded-[2px] font-sans text-[0.95rem] text-navy bg-white outline-none transition-colors duration-200 focus:border-gold"
         >
           <option value="">Select an option...</option>
@@ -71,7 +80,7 @@
           Message
         </label>
         <textarea
-          id="message"
+          id="message" name="Message" required
           placeholder="Tell us a bit about your land, project, or enquiry..."
           class="w-full py-3 px-4 border border-warm-gray rounded-[2px] font-sans text-[0.95rem] text-navy bg-white outline-none transition-colors duration-200 focus:border-gold resize-y min-h-[120px]"
         ></textarea>
