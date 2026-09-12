@@ -25,6 +25,8 @@ Styling is Tailwind v4 via `@tailwindcss/vite` (configured in `astro.config.mjs`
 
 Deployment is GitHub Actions → GitHub Pages (`.github/workflows/deploy.yml`, builds on every push to `main`). The site is served on the custom domain `singhequityhomes.co.uk` (registered/DNS-managed via Cloudflare) rather than the default `singh-surjeet.github.io` path — `public/CNAME` (copied into `dist/` on build) and the GitHub Pages site's `cname` setting both have to agree with `site` in `astro.config.mjs`, and Cloudflare's DNS records for the domain must stay unproxied (DNS-only) or GitHub's automatic HTTPS cert issuance breaks. See README's Deployment section for the exact DNS records. GitHub Pages also requires the repo to stay public; it isn't available for private repos on the free plan.
 
+`main` is branch-protected: direct pushes are rejected — changes need a branch + PR with the `build` check passing (0 approvals required). That check comes from `.github/workflows/ci.yml` (build-only, triggers on `pull_request`), kept separate from `deploy.yml` (triggers on `push` to `main`, actually deploys) — don't merge the two. Repo admins can still bypass via `enforce_admins: false`. `.github/dependabot.yml` opens weekly npm/GitHub-Actions update PRs, gated by the same `build` check.
+
 Copy across all components is deliberately written in first-person plural ("we"), direct and low-jargon — a conscious choice for a small property business, not a house style default. Preserve that voice when editing marketing copy; don't drift into third-person corporate phrasing ("SinghEquity Homes Ltd is a...").
 
 ## Technology choices
